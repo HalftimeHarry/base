@@ -1,17 +1,16 @@
 image:
   file: Dockerfile
 ports:
-  - port: 8001
-    onOpen: ignore
-  - port: 3306
-    onOpen: ignore
+  - port: 8000
+    onOpen: open-preview
 tasks:
   - init: composer install
-    command: echo "Hallo"
+    command: echo "Hello"
   - name: MySQL
     command: >
         mysqld
   - name: Apache
     command: >
         apachectl start;
-        multitail /var/log/apache2/error.log -I /var/log/apache2/access.log
+        multitail /var/log/apache2/error.log -I /var/log/apache2/access.log;
+        php bin/console server:run 0.0.0.0:8000
