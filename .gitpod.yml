@@ -1,18 +1,8 @@
-image:
-  file: Dockerfile
 ports:
-- port: 8080
+- port: 8000
   onOpen: open-preview
 tasks:
-- name: Terminal
+- init: >
+    composer update
   command: >
-    echo "";
-    echo "Commands you can try:";
-    echo " * apachectl stop";
-    echo " * apachectl start";
-    echo " * gp open /var/log/apache2/access.log";
-    echo " * gp open /var/log/apache2/error.log";
-- name: Apache
-  command: >
-    apachectl start &&
-    multitail /var/log/apache2/access.log -I /var/log/apache2/error.log
+    php bin/console server:run 0.0.0.0:8000
