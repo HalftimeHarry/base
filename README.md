@@ -5,6 +5,14 @@ Start a Drupal 8 project
 
 composer create-project drupal-composer/drupal-project:8.x-dev mysite --no-interaction
 
+# Mysql set-up
+
+mysql> CREATE DATABASE mysite_db;
+
+mysql> CREATE USER 'mysite_user'@'localhost' IDENTIFIED BY 'MADcap(123)';
+
+mysql> GRANT ALL PRIVILEGES ON mysite_db.* TO 'mysite_user'@'localhost';
+
 # Example how to run the Apache Web Server in Gitpod.io
 
 ## Try or Contribute
