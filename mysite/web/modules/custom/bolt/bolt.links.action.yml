@@ -1,0 +1,5 @@
+entity.equipment.add_form:
+  route_name: entity.equipment.add_form
+  title: 'Add Equipment'
+  appears_on:
+    - entity.equipment.collection

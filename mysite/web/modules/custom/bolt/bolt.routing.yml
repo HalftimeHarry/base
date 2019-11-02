@@ -1,0 +1,9 @@
+bolt.set_pm:
+  path: '/admin/config/bolt/setpm'
+  defaults:
+    _form: '\Drupal\bolt\Form\SetPm'
+    _title: 'SetPm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

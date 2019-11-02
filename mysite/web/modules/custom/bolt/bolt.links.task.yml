@@ -1,0 +1,26 @@
+# Equipment routing definition
+equipment.settings_tab:
+  route_name: equipment.settings
+  title: 'Settings'
+  base_route: equipment.settings
+
+entity.equipment.canonical:
+  route_name: entity.equipment.canonical
+  base_route: entity.equipment.canonical
+  title: 'View'
+
+entity.equipment.edit_form:
+  route_name: entity.equipment.edit_form
+  base_route: entity.equipment.canonical
+  title: 'Edit'
+
+entity.equipment.version_history:
+  route_name: entity.equipment.version_history
+  base_route: entity.equipment.canonical
+  title: 'Revisions'
+
+entity.equipment.delete_form:
+  route_name:  entity.equipment.delete_form
+  base_route:  entity.equipment.canonical
+  title: Delete
+  weight: 10

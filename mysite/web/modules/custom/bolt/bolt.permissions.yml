@@ -1,0 +1,31 @@
+add equipment entities:
+  title: 'Create new Equipment entities'
+
+administer equipment entities:
+  title: 'Administer Equipment entities'
+  description: 'Allow to access the administration form to configure Equipment entities.'
+  restrict access: true
+
+delete equipment entities:
+  title: 'Delete Equipment entities'
+
+edit equipment entities:
+  title: 'Edit Equipment entities'
+
+view published equipment entities:
+  title: 'View published Equipment entities'
+
+view unpublished equipment entities:
+  title: 'View unpublished Equipment entities'
+
+view all equipment revisions:
+  title: 'View all Equipment revisions'
+
+revert all equipment revisions:
+  title: 'Revert all Equipment revisions'
+  description: 'Role requires permission <em>view Equipment revisions</em> and <em>edit rights</em> for equipment entities in question or <em>administer equipment entities</em>.'
+
+delete all equipment revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Equipment revisions</em> and <em>delete rights</em> for equipment entities in question or <em>administer equipment entities</em>.'
+

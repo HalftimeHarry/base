@@ -1,0 +1,20 @@
+
+# Equipment menu items definition
+entity.equipment.collection:
+  title: 'Equipment list'
+  route_name: entity.equipment.collection
+  description: 'List Equipment entities'
+  parent: system.admin_structure
+  weight: 100
+
+equipment.admin.structure.settings:
+  title: 'Equipment settings'
+  description: 'Configure Equipment entities'
+  route_name: equipment.settings
+  parent: system.admin_structure
+bolt.set_pm:
+  title: 'SetPm'
+  route_name: bolt.set_pm
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
