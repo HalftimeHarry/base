@@ -6,6 +6,7 @@ USER root
 # * Apache - the web server
 # * Multitail - see logs live in the terminal
 RUN apt-get update \
+ && a2dismod mpm_event \
  && apt-get -y install apache2 multitail \
  && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/*
 
