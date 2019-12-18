@@ -1,0 +1,17 @@
+uuid: d7bf8979-1639-4e01-98c6-a4c0faf21579
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Building
+type: building
+description: 'The Building where the equipment lives'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_pm_due
+    - node.type.equipment
+  module:
+    - datetime
+id: node.equipment.field_equ_pm_due
+field_name: field_equ_pm_due
+entity_type: node
+bundle: equipment
+label: 'PM due'
+description: 'I you need to adjust this set the auto to no'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

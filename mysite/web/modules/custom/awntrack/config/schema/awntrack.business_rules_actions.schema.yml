@@ -1,0 +1,16 @@
+business_rules.action.type.adv_action:
+  type: mapping
+  label: 'Advance Exp Date'
+  mapping:
+    my_custom_setting_1:
+      type: string
+      label: 'May need 1'
+    my_custom_setting_2:
+      type: string
+      label: 'May need 2'
+    my_custom_setting_3:
+      type: string
+      label: 'May need 3'
+    my_custom_setting_4:
+      type: string
+      label: 'May need 4'

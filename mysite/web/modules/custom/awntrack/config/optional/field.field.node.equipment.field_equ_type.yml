@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_type
+    - node.type.equipment
+  module:
+    - options
+id: node.equipment.field_equ_type
+field_name: field_equ_type
+entity_type: node
+bundle: equipment
+label: Type
+description: 'If you need to add more types please ask Dustin to add'
+required: false
+translatable: false
+default_value:
+  -
+    value: ubc
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,11 @@
+name: 'Awntrack'
+type: module
+description: 'Awntrack API'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - drupal:pathauto
+  - drupal:feeds
+  - drupal:token
+  - drupal:ctools
+  - drupal:auto_entitylabel

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_exp
+    - node.type.equipment
+  module:
+    - datetime
+id: node.equipment.field_equ_exp
+field_name: field_equ_exp
+entity_type: node
+bundle: equipment
+label: 'Issue Date'
+description: "If yes this will set the expiration 3 years from the date set here\r\n"
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: 08/02/21
+default_value_callback: ''
+settings: {  }
+field_type: datetime

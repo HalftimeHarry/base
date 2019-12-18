@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_sn
+    - node.type.equipment
+id: node.equipment.field_equ_sn
+field_name: field_equ_sn
+entity_type: node
+bundle: equipment
+label: SN
+description: 'Example: 560003273'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

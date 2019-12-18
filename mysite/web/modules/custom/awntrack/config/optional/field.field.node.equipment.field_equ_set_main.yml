@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_set_main
+    - node.type.equipment
+  module:
+    - options
+id: node.equipment.field_equ_set_main
+field_name: field_equ_set_main
+entity_type: node
+bundle: equipment
+label: 'Set Expiration & Next PM Automaticly'
+description: 'If yes it will automatically set the final expiration +3 years and will also populate the next PM due +6 months'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'yes'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

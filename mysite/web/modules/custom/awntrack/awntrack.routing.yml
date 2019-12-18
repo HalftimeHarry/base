@@ -1,0 +1,10 @@
+
+awntrack.update_form:
+  path: '/update'
+  defaults:
+    _form: '\Drupal\awntrack\Form\UpdateForm'
+    _title: 'UpdateForm'
+  requirements:
+    _permission: 'administer updates'
+  
+  

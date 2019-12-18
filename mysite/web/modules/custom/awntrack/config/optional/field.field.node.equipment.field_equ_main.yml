@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_main
+    - node.type.equipment
+  module:
+    - datetime
+id: node.equipment.field_equ_main
+field_name: field_equ_main
+entity_type: node
+bundle: equipment
+label: 'Final Maintenance '
+description: 'Identifies when this equipment expires and is automatically set if yes selected above'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,30 @@
+uuid: 9ce2e557-b410-4ca4-aa1f-ed8295c54244
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_equ_type
+field_name: field_equ_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: battery
+      label: Battery
+    -
+      value: mpu
+      label: 'Mobile Power Unit'
+    -
+      value: ubc
+      label: 'Universal Battery Charger'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

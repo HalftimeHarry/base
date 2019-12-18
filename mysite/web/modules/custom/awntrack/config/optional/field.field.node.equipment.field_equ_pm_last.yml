@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equ_pm_last
+    - node.type.equipment
+  module:
+    - datetime
+id: node.equipment.field_equ_pm_last
+field_name: field_equ_pm_last
+entity_type: node
+bundle: equipment
+label: 'Last PM'
+description: 'By default the PM Due will be automatically set 6 months from this date if you need to set manually the set below to No  '
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: relative
+    default_date: 10/1/2018
+default_value_callback: ''
+settings: {  }
+field_type: datetime
