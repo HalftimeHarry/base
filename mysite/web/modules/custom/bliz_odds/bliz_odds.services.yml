@@ -1,0 +1,7 @@
+services:
+  logger.channel.bliz_odds:
+    parent: logger.channel_base
+    arguments: ['bliz_odds']
+  bliz_odds.default:
+    class: Drupal\bliz_odds\BlizService
+    arguments: ['@entity_type.manager', '@entity.query']
