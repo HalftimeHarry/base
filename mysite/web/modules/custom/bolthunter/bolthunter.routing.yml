@@ -1,0 +1,9 @@
+bolthunter.bolt_form:
+  path: '/admin/config/bolthunter/bolt'
+  defaults:
+    _form: '\Drupal\bolthunter\Form\BoltForm'
+    _title: 'Diration Settings'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

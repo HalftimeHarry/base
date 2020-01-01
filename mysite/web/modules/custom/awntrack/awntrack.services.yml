@@ -1,0 +1,4 @@
+services:
+  awn.service:
+    class: Drupal\awntrack\AwnService
+    arguments: ['@entity_type.manager', '@entity.query']

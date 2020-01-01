@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.patient.field_pat_loc_ref
+    - field.field.node.patient.field_pat_mr
+    - field.field.node.patient.field_pat_type
+    - node.type.patient
+  module:
+    - options
+    - user
+id: node.patient.default
+targetEntityType: node
+bundle: patient
+mode: default
+content:
+  field_pat_loc_ref:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pat_mr:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pat_type:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

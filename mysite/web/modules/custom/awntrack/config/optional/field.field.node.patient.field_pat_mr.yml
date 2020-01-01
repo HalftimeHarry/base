@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pat_mr
+    - node.type.patient
+id: node.patient.field_pat_mr
+field_name: field_pat_mr
+entity_type: node
+bundle: patient
+label: 'MR#'
+description: 'Use the MR #'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

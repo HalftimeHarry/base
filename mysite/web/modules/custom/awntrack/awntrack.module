@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains awntrack.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function awntrack_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the awntrack module.
+    case 'help.page.awntrack':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Awntrack API') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function awntrack_theme() {
+  return [
+    'awntrack' => [
+      'render element' => 'children',
+    ],
+  ];
+}

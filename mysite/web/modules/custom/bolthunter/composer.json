@@ -1,0 +1,13 @@
+{
+    "name": "bolthunter",
+    "type": "drupal-module",
+    "description": "Bolthunter Module",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/bolthunter",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/bolthunter",
+        "source": "http://cgit.drupalcode.org/bolthunter",
+    },
+}

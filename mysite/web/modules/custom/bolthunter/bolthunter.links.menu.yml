@@ -1,0 +1,20 @@
+
+# Equipment entity menu items definition
+entity.equipment_entity.collection:
+  title: 'Equipment entity list'
+  route_name: entity.equipment_entity.collection
+  description: 'List Equipment entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+equipment_entity.admin.structure.settings:
+  title: 'Equipment entity settings'
+  description: 'Configure Equipment entity entities'
+  route_name: equipment_entity.settings
+  parent: system.admin_structure
+bolthunter.bolt_form:
+  title: 'Set Expiration & PM Defaults'
+  route_name: bolthunter.bolt_form
+  description: 'Use this form to adjust deration settings'
+  parent: system.admin_config_system
+  weight: 99

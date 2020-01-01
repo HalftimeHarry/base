@@ -1,0 +1,3 @@
+bolthunter:
+  get_dir_next_pm: "+6Months"
+  get_dir_final: "+3years"

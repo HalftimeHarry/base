@@ -1,0 +1,26 @@
+# Equipment entity routing definition
+equipment_entity.settings_tab:
+  route_name: equipment_entity.settings
+  title: 'Settings'
+  base_route: equipment_entity.settings
+
+entity.equipment_entity.canonical:
+  route_name: entity.equipment_entity.canonical
+  base_route: entity.equipment_entity.canonical
+  title: 'View'
+
+entity.equipment_entity.edit_form:
+  route_name: entity.equipment_entity.edit_form
+  base_route: entity.equipment_entity.canonical
+  title: 'Edit'
+
+entity.equipment_entity.version_history:
+  route_name: entity.equipment_entity.version_history
+  base_route: entity.equipment_entity.canonical
+  title: 'Revisions'
+
+entity.equipment_entity.delete_form:
+  route_name:  entity.equipment_entity.delete_form
+  base_route:  entity.equipment_entity.canonical
+  title: Delete
+  weight: 10

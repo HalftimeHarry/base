@@ -1,0 +1,17 @@
+uuid: 00a614f5-85a3-42ee-bc42-69a732500f8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'A Location typically has a scanner however we may assign this to Outpatient where there are no scanners'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
