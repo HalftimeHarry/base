@@ -1,0 +1,5 @@
+team-selection:
+  version: 1.x
+  css:
+    theme:
+      css/team-selection.css: {}

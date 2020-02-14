@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Contains pga_imp.module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Component\Serialization\Json;
+
+
+/**
+ * Implements hook_cron().
+ */
+function pga_imp_cron() {
+  // We access our configuration.
+  $config = Drupal::configFactory()
+    ->getEditable('pga_imp.importsettings');
+
+  // Get configuration
+  $tour_id   = $config->get('set_tournament_id');
+  $allow   = $config->get('allow_import');
+
+
+  $imported     = 0;
+    // Grab feed.
+  $url_1 = 'https://api.sportsdata.io/golf/v2/json/Leaderboard/';
+  $url_2 = '?key=f77f994d6f904d7f9f536ea70e77c440';
+  $feed_url     = Url::fromUri(
+    $url_1.$tour_id.$url_2)->toString();
+
+  $client   = Drupal::httpClient();
+  $response = $client->request('GET', $feed_url);
+
+  try {
+    if ($response->getReasonPhrase() != 'OK') {
+      throw new Exception(t(
+        'Received status @status',
+        array('$status' => $response->getReasonPhrase())
+      ));
+    }
+
+    $data           = Json::decode($response->getBody());
+    $import_service = \Drupal::service('pga_up.default');
+
+    $golfers = $data['Players'];
+
+    if ($allow === 'yes') {
+        foreach ($golfers as $golfer) {
+           $import_service->createNode($golfer['Name'], ['field_player_id' => $golfer['PlayerID']]);
+
+        $imported++;
+   }
+    } else {
+      dpm('Import turned off');
+    }
+
+
+
+  } catch (RequestException $e) {
+    watchdog_exception('pga_imp', $e);
+  }
+  Drupal::logger('pga_imp')
+    ->info('Imported @count golfers', ['@count' => $imported]);
+}

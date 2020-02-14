@@ -1,0 +1,4 @@
+services:
+  pga_imp.service:
+    class: Drupal\pga_imp\ImportService
+    arguments: ['@entity.query', '@entity_type.manager']

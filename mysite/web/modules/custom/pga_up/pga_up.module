@@ -1,0 +1,87 @@
+<?php
+
+/**
+ * @file
+ * Contains pga_imp.module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Component\Serialization\Json;
+
+/**
+ * Implements hook_cron().
+ */
+function pga_up_cron() {
+    // We access our configuration.
+  $config = Drupal::configFactory()
+    ->getEditable('pga_imp.importsettings');
+
+  // Get configuration
+  $tour_id   = $config->get('set_tournament_id');
+  $allow   = $config->get('allow_import');
+  $taxid  = $config->get('tournament_name');
+
+  $updated = 0;
+    // Grab feed.
+  $url_1 = 'https://api.sportsdata.io/golf/v2/json/Leaderboard/';
+  $url_2 = '?key=f77f994d6f904d7f9f536ea70e77c440';
+
+
+  $feed_url = Url::fromUri(
+  $url_1.$tour_id.$url_2)->toString();
+
+  $client   = Drupal::httpClient();
+  $response = $client->request('GET', $feed_url);
+
+  try {
+    if ($response->getReasonPhrase() != 'OK') {
+      throw new Exception(t(
+        'Received status @status',
+        array('$status' => $response->getReasonPhrase())
+      ));
+    }
+    $data           = Json::decode($response->getBody());
+    $import_service = Drupal::service('pga_imp.service');
+
+    $golfers = $data['leaderboard']['players'];
+       if ($allow === 'no') {
+        foreach ($golfers as $golfer) {
+            $each_golfer = ([
+             'field_player_id' => $golfer['player_id'],
+             'field_golfer_score'=> $golfer['total']
+        ]);
+
+           $nodes = $import_service->listOfGolfers($taxid);
+           foreach ($nodes as $node) {
+                $pid_dig_from_node = $node->get('field_player_id')->getValue();
+                $pid = $pid_dig_from_node[0]['value']; //player id from node
+                $gid = $each_golfer['field_player_id'];//player id from api
+                $new_score = $each_golfer['field_golfer_score'];
+             //   dump($pid.' '.'try to match these'. ' '. $gid);die;
+
+           }
+
+           $node_to_update = $import_service->matchNodesToGolfer($gid);
+
+
+           foreach ($node_to_update as $update) {
+
+         }
+
+           $import_service->updateNode($update, $new_score);
+            dump($new_score);
+            $updated++;
+   }
+
+    } else {
+      dpm('Import turned off');
+    }
+
+
+
+  } catch (RequestException $e) {
+    watchdog_exception('pga_up', $e);
+  }
+  Drupal::logger('pga_up')
+    ->info('Updated @count golfers', ['@count' => $updated]);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "drupal/pga_imp",
+  "type": "drupal-module",
+  "description": "Auto Import PGA Golf scores",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/pga_imp",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/pga_imp",
+    "source": "http://cgit.drupalcode.org/pga_imp"
+  },
+  "require": { }
+}

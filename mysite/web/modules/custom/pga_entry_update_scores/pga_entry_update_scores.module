@@ -1,0 +1,162 @@
+<?php
+
+/**
+ * @file
+ * Contains pga_imp.module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Component\Serialization\Json;
+
+/**
+ * Implements hook_cron().
+ */
+function pga_entry_update_scores_cron() {
+  
+    $config = Drupal::configFactory()
+    ->getEditable('pga_imp.importsettings');
+
+  // Get configuration
+  $entid  = '1'; 
+
+
+      $import_service = Drupal::service('pga_imp.service');
+      $entries = $import_service->listOfEntries($entid);
+   foreach ($entries as $entry) {
+        $ea_ent_id = $entry->nid->value;//get the entry
+        $more = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $field = 'field_entry_group_ref';//get the group from the entry
+        $referencedEntity1 = $more
+         ->get($field)
+         ->first()
+         ->get('entity')
+         ->getTarget()
+         ->getValue();
+        
+        $gp_nid = $referencedEntity1->nid->value; 
+        $more2 = \Drupal\node\Entity\Node::load($gp_nid);//get the golfers from the group
+        $field = 'field_group_of_golfers';
+        $referencedEntity2 = $more2
+         ->get($field)
+         ->first()
+         ->get('entity')
+         ->getTarget()
+         ->getValue();
+         
+        $ent_id = $more2->nid->value; //titles of the entry
+        $ent_n = $more2->title->value; //titles of the entry
+        $ent_g1 = $more2->field_group_of_golfers[0]->entity;
+        $g1_score = $ent_g1->field_golfer_score->value;
+        $ent_g2 = $more2->field_group_of_golfers[1]->entity;
+        $g2_score = $ent_g2->field_golfer_score->value;
+        $ent_g3 = $more2->field_group_of_golfers[2]->entity;
+        $g3_score = $ent_g3->field_golfer_score->value;
+        $ent_g4 = $more2->field_group_of_golfers[3]->entity;
+        $g4_score = $ent_g4->field_golfer_score->value;
+        $ent_g5 = $more2->field_group_of_golfers[4]->entity;
+        $g5_score = $ent_g5->field_golfer_score->value;
+        
+        $p_nid = $more->nid->value;
+        $more3 = \Drupal\node\Entity\Node::load($p_nid);//get the picks from the entry
+        $field = 'field_entry_picks_ref';
+        $referencedEntity3 = $more3
+         ->get($field)
+         ->first()
+         ->get('entity')
+         ->getTarget()
+         ->getValue();
+
+        $ent_p1 = $more3->field_entry_picks_ref[0]->entity;
+        $p1_score = $ent_p1->field_golfer_score->value;
+        $ent_p2 = $more3->field_entry_picks_ref[1]->entity;
+        $p2_score = $ent_p2->field_golfer_score->value;
+        $ent_p3 = $more3->field_entry_picks_ref[2]->entity;
+        $p3_score = $ent_p3->field_golfer_score->value;
+        
+        $a_nid = $more->nid->value;
+        $more4 = \Drupal\node\Entity\Node::load($a_nid);//get the alternates
+        $field = 'field_entry_alt_ref';
+        $referencedEntity4 = $more4
+         ->get($field)
+         ->first()
+         ->get('entity')
+         ->getTarget()
+         ->getValue();
+      
+       
+        $ent_a1 = $more4->field_entry_picks_ref[0]->entity;
+        $a1_score = $ent_a1->field_golfer_score->value;
+        $ent_a2 = $more4->field_entry_picks_ref[1]->entity;
+        $a2_score = $ent_a2->field_golfer_score->value;
+        
+        $alt = $more->field_entry_alt_list->value;
+        
+    //if no alternates use this
+       if ($alt == 'no') {
+           
+        $best_result = $import_service->calcEntryScores($g1_score, $g2_score, $g3_score,
+        $g4_score, $g5_score, $p1_score, $p2_score, $p3_score);
+        $node = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $keep = $node->title->value;
+        $node->set("title", $keep);
+        $node->set("field_entry_score", $best_result);
+        $node->save();
+       }
+    //if there is one alternate because one golfer is out  
+       if ($alt == 'one') {
+        $best_result = $import_service->calcEntryScores($a1_score, $g2_score, $g3_score,
+        $g4_score, $g5_score, $p1_score, $p2_score, $p3_score);
+
+        $node = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $node->set("field_entry_score", $best_result);
+        $node->save();
+       }
+    //if there is two alternates because 2 golfers are out
+       if ($alt == 'two') {
+        $best_result = $import_service->calcEntryScores($a1_score, $a2_score, $g3_score,
+        $g4_score, $g5_score, $p1_score, $p2_score, $p3_score);
+        
+        $node = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $node->set("field_entry_score", $best_result);
+        $node->save();
+       }
+    //if there is one alternate because 1 pick is out
+       if ($alt == 'three') {
+        $best_result = $import_service->calcEntryScores($g1_score, $g2_score, $g3_score,
+        $g4_score, $g5_score, $a1_score, $p2_score, $p3_score);
+        
+        $node = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $node->set("field_entry_score", $best_result);
+        $node->save();
+       }
+    //if there is two alternates because 2 picks are out
+       if ($alt == 'four') {
+        $best_result = $import_service->calcEntryScores($g1_score, $g2_score, $g3_score,
+        $g4_score, $g5_score, $a1_score, $a2_score, $p3_score);
+        
+        $node = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $node->set("field_entry_score", $best_result);
+        $node->save();
+       }
+    //if there is two alternates because 1 golfer is out and one pick is out
+       if ($alt == 'five') {
+        $best_result = $import_service->calcEntryScores($a1_score, $g2_score, $g3_score,
+        $g4_score, $g5_score, $a2_score, $p2_score, $p3_score);
+        
+        $node = \Drupal\node\Entity\Node::load($ea_ent_id);
+        $node->set("field_entry_score", $best_result);
+        $node->save();
+       }
+       } 
+
+   }
+/**
+ * Implements hook_theme().
+ */
+function pga_entry_update_scores_theme() {
+  return [
+    'pga_entry_update_scores' => [
+      'render element' => 'children',
+    ],
+  ];
+}

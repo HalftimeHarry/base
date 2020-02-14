@@ -1,0 +1,6 @@
+name: Baz
+type: module
+description: 'Demo for custom field.'
+package: Custom
+core: 8.x
+hidden: false

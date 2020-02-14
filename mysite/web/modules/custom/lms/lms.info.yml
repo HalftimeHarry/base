@@ -1,0 +1,5 @@
+name: lms
+type: module
+description: LMS Functunality
+core: 8.x
+package: Custom

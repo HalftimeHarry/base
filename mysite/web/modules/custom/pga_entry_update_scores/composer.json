@@ -1,0 +1,14 @@
+{
+  "name": "drupal/pga_entry_update_scores",
+  "type": "drupal-module",
+  "description": "PGA Entry Update Scores",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/pga_entry_update_scores",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/pga_entry_update_scores",
+    "source": "http://cgit.drupalcode.org/pga_entry_update_scores"
+  },
+  "require": { }
+}

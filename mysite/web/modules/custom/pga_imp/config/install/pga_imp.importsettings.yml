@@ -1,0 +1,4 @@
+pga_imp:
+  set_tournament_id: "361"
+  allow_import: "yes"
+  tournament_name: "1"

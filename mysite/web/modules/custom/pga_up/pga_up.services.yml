@@ -1,0 +1,7 @@
+services:
+  logger.channel.pga_up:
+    parent: logger.channel_base
+    arguments: ['pga_up']
+  pga_up.default:
+    class: Drupal\pga_up\pgaUpService
+    arguments: ['@entity.query', '@entity_type.manager']

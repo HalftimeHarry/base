@@ -1,0 +1,8 @@
+name: 'PGA Entry Update Scores'
+type: module
+description: 'PGA Entry Update Scores'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - pga_imp
+  - pga_up

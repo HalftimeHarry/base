@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains lms.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function lms_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the lms module.
+    case 'help.page.lms':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('LMS Functunality') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function lms_theme() {
+  return [
+    'lms' => [
+      'render element' => 'children',
+    ],
+  ];
+}

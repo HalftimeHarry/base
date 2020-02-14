@@ -1,0 +1,5 @@
+name: 'pga_up'
+type: module
+description: 'PGA Golfer uptate'
+core: 8.x
+package: 'Custom'

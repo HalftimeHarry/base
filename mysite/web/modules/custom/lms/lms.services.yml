@@ -1,0 +1,5 @@
+services:
+  lms.teamlist:
+    class: Drupal\lms\TeamListService
+    arguments: []
+

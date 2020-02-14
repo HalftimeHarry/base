@@ -1,0 +1,5 @@
+name: 'Auto Import PGA Golf scores'
+type: module
+description: 'Auto Import PGA Golf scores'
+core: 8.x
+package: 'Custom'
