@@ -122,7 +122,7 @@ class Game extends EditorialContentEntityBase implements GameInterface {
     $this->getPastGames();
     $this->setAverage();
     $this->setPrediction();
-  //  $this->createPastGame();
+    //$this->createPastGame();
     $this->setResult();
     $this->setPredictionResult();
   }
