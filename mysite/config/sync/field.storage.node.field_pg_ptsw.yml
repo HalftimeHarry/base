@@ -1,0 +1,20 @@
+uuid: e0a4c0cf-d5a8-4b66-a75d-aeaa304e3b5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_pg_ptsw
+field_name: field_pg_ptsw
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

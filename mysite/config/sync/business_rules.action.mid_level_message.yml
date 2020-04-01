@@ -1,0 +1,15 @@
+uuid: 9a458bfd-3d89-4573-aa7f-05e1010ecad9
+langcode: en
+status: true
+dependencies: {  }
+id: mid_level_message
+label: 'Def Mid Score'
+description: 'Mid level message'
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  score: score
+settings:
+  message_type: status
+  message: 'The {{mt_home->title}} are a mid-level scoring Defense'

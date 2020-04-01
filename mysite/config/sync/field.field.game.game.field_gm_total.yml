@@ -1,0 +1,24 @@
+uuid: ba1e34f2-5ad3-4bae-ad85-c3aeb6452bcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_total
+  module:
+    - bliz_odds
+id: game.game.field_gm_total
+field_name: field_gm_total
+entity_type: game
+bundle: game
+label: Total
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

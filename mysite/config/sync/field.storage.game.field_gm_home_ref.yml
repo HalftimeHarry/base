@@ -1,0 +1,20 @@
+uuid: d874911b-3710-47dc-941c-0885c10833ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+    - node
+id: game.field_gm_home_ref
+field_name: field_gm_home_ref
+entity_type: game
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

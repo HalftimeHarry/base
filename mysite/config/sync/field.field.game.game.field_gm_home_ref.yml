@@ -1,0 +1,29 @@
+uuid: 5f33dc33-a5ba-4397-8beb-68f206e81f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_home_ref
+    - node.type.team
+  module:
+    - bliz_odds
+id: game.game.field_gm_home_ref
+field_name: field_gm_home_ref
+entity_type: game
+bundle: game
+label: Home
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      team: team
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 86905ae1-af09-40c7-91c5-b5e5df2c41c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_average
+  module:
+    - bliz_odds
+id: game.game.field_gm_average
+field_name: field_gm_average
+entity_type: game
+bundle: game
+label: 'Average Difference'
+description: 'If positive go over if negative go under '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

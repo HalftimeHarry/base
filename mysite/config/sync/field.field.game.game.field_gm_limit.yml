@@ -1,0 +1,23 @@
+uuid: 7f2a8313-9dc1-4bf5-94c0-df7e07c6ab97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_limit
+  module:
+    - bliz_odds
+    - options
+id: game.game.field_gm_limit
+field_name: field_gm_limit
+entity_type: game
+bundle: game
+label: Limit
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 8
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

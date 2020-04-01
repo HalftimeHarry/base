@@ -1,0 +1,15 @@
+uuid: 66a4114a-d85d-4011-b55c-cfc1e9229404
+langcode: en
+status: true
+dependencies: {  }
+id: away_nid
+label: 'Away NID'
+type: entity_filed_variable
+description: 'Away NID'
+target_entity_type: game
+target_bundle: game
+tags:
+  ref: ref
+settings:
+  field: field_gm_away_ref
+  data: current_data

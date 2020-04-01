@@ -1,0 +1,20 @@
+uuid: 201e7551-e9ef-4b81-890c-133136ffed62
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_pg_week
+field_name: field_pg_week
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

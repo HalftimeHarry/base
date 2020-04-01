@@ -1,0 +1,20 @@
+uuid: cc128ec9-1154-4148-b697-aea9ace703e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+id: game.field_gm_ptsl
+field_name: field_gm_ptsl
+entity_type: game
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

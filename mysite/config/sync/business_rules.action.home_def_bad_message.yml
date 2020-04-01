@@ -1,0 +1,15 @@
+uuid: 8059b4ae-8b8b-477d-96a3-aacf5166ddec
+langcode: en
+status: true
+dependencies: {  }
+id: home_def_bad_message
+label: 'Home def bad message'
+description: 'Home def bad message'
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  'bad score defense': 'bad score defense'
+settings:
+  message_type: status
+  message: 'The {{mt_home->title}} do not have a good scoring Defense'

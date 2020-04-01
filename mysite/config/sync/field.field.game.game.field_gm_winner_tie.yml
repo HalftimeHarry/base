@@ -1,0 +1,20 @@
+uuid: 77581477-dfc3-4f9a-91b1-31ccf7eb6edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_winner_tie
+  module:
+    - bliz_odds
+id: game.game.field_gm_winner_tie
+field_name: field_gm_winner_tie
+entity_type: game
+bundle: game
+label: Winner/tie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

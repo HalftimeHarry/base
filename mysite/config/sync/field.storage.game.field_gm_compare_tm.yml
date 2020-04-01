@@ -1,0 +1,27 @@
+uuid: a40c2e2b-4aff-45d8-8707-dc54039d4921
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+    - options
+id: game.field_gm_compare_tm
+field_name: field_gm_compare_tm
+entity_type: game
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: home
+      label: home
+    -
+      value: away
+      label: away
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

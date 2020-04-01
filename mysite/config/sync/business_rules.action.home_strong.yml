@@ -1,0 +1,15 @@
+uuid: c78a7bd4-01ca-48b2-850f-057ec96698b1
+langcode: en
+status: true
+dependencies: {  }
+id: home_strong
+label: 'Home strong'
+description: 'Home strong'
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  ref: ref
+settings:
+  message_type: status
+  message: 'The {{mt_home->title}} have had a tougher schedule'

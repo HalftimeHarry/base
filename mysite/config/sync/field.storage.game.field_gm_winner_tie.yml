@@ -1,0 +1,21 @@
+uuid: 9d612712-9008-4100-8c06-6affe52d0ea4
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+id: game.field_gm_winner_tie
+field_name: field_gm_winner_tie
+entity_type: game
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

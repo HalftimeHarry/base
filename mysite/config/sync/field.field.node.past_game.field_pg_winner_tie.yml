@@ -1,0 +1,19 @@
+uuid: 071ec162-9081-42c5-aa67-44bcde47c221
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_winner_tie
+    - node.type.past_game
+id: node.past_game.field_pg_winner_tie
+field_name: field_pg_winner_tie
+entity_type: node
+bundle: past_game
+label: Winner/tie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

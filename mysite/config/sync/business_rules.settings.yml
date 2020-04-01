@@ -1,0 +1,4 @@
+enable_scheduler: 0
+debug_screen: 1
+clear_render_cache: 0
+enable_safemode: 0

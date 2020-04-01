@@ -1,0 +1,38 @@
+uuid: 3194985b-70c3-470f-8da0-b787bc9aae43
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.past_game.feeds_item
+    - field.field.node.past_game.field_pg_away_won
+    - field.field.node.past_game.field_pg_bliz_id
+    - field.field.node.past_game.field_pg_loser_tie
+    - field.field.node.past_game.field_pg_ptsl
+    - field.field.node.past_game.field_pg_ptsw
+    - field.field.node.past_game.field_pg_season
+    - field.field.node.past_game.field_pg_week
+    - field.field.node.past_game.field_pg_winner_tie
+    - node.type.past_game
+  module:
+    - user
+id: node.past_game.teaser
+targetEntityType: node
+bundle: past_game
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true
+  field_pg_away_won: true
+  field_pg_bliz_id: true
+  field_pg_loser_tie: true
+  field_pg_ptsl: true
+  field_pg_ptsw: true
+  field_pg_season: true
+  field_pg_week: true
+  field_pg_winner_tie: true

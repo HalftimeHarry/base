@@ -1,0 +1,33 @@
+uuid: 2c68cb48-e855-49ae-91f0-249d7eb9bcfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+    - options
+id: game.field_gm_prediction
+field_name: field_gm_prediction
+entity_type: game
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: no_play
+      label: 'No play'
+    -
+      value: over
+      label: over
+    -
+      value: under
+      label: under
+    -
+      value: push
+      label: push
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

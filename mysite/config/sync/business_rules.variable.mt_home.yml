@@ -1,0 +1,13 @@
+uuid: feadf463-4f24-43dd-b332-395eab70d787
+langcode: en
+status: true
+dependencies: {  }
+id: mt_home
+label: 'MT Home'
+type: entity_empty_variable
+description: 'MT Home'
+target_entity_type: node
+target_bundle: team
+tags:
+  ref: ref
+settings: {  }

@@ -1,0 +1,23 @@
+uuid: fe9122c1-b292-416a-8d53-937eb7e97251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_compare_tm
+  module:
+    - bliz_odds
+    - options
+id: game.game.field_gm_compare_tm
+field_name: field_gm_compare_tm
+entity_type: game
+bundle: game
+label: Compare
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: home
+default_value_callback: ''
+settings: {  }
+field_type: list_string

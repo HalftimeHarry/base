@@ -1,0 +1,16 @@
+uuid: 4c0292ee-441e-4247-9315-ecd62a869b68
+langcode: en
+status: true
+dependencies: {  }
+id: fetch_away
+label: 'Fetch Away'
+description: 'Fetch Away'
+type: fetch_entity_variable
+target_entity_type: node
+target_bundle: team
+tags:
+  ref: ref
+settings:
+  field: nid
+  empty_variable: mt_away
+  value: '{{away_nid}}'

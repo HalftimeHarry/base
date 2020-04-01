@@ -1,0 +1,25 @@
+uuid: 3f02c446-7612-4c33-8ada-5d84cde5f657
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_week
+    - node.type.past_game
+id: node.past_game.field_pg_week
+field_name: field_pg_week
+entity_type: node
+bundle: past_game
+label: Week
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 18
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

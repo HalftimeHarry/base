@@ -1,0 +1,20 @@
+uuid: 09bad4b3-0dd1-43a2-9166-6ef0cf9e3c04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_def_scor
+field_name: field_def_scor
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

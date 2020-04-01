@@ -1,0 +1,54 @@
+uuid: f360d686-cd45-4cba-b793-95c6d26000f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team.field_def_rus
+    - node.type.team
+  module:
+    - node
+label: 'Rushing Defense'
+id: rushing_defense
+description: 'Rushing Defense'
+help: 'Rushing Defense'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: team
+custom_sources:
+  tm:
+    label: Tm
+    value: Tm
+    machine_name: tm
+  rk:
+    label: Rk
+    value: Rk
+    machine_name: rk
+mappings:
+  -
+    target: title
+    map:
+      value: tm
+    unique:
+      value: '1'
+  -
+    target: field_def_rus
+    map:
+      value: rk

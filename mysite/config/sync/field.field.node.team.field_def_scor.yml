@@ -1,0 +1,23 @@
+uuid: 9f120084-e8f9-472e-849e-4be5450ec720
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_def_scor
+    - node.type.team
+id: node.team.field_def_scor
+field_name: field_def_scor
+entity_type: node
+bundle: team
+label: 'Defense Scoring'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

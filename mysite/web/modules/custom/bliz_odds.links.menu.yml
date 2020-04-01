@@ -1,0 +1,20 @@
+
+# Game menu items definition
+entity.game.collection:
+  title: 'Game list'
+  route_name: entity.game.collection
+  description: 'List Game entities'
+  parent: system.admin_structure
+  weight: 100
+
+game.admin.structure.settings:
+  title: 'Game settings'
+  description: 'Configure Game entities'
+  route_name: game.settings
+  parent: system.admin_structure
+bliz_odds.create_custom_game_setting_form:
+  title: 'CreateCustomGameSettingForm'
+  route_name: bliz_odds.create_custom_game_setting_form
+  description: 'Custom NFL game settings most important create past game and Bliz ID'
+  parent: system.admin_config_system
+  weight: 99

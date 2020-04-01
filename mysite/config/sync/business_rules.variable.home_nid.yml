@@ -1,0 +1,15 @@
+uuid: 4d318000-9057-438e-81c1-187191c3d17d
+langcode: en
+status: true
+dependencies: {  }
+id: home_nid
+label: 'Home NID'
+type: entity_filed_variable
+description: 'Home NID'
+target_entity_type: game
+target_bundle: game
+tags:
+  ref: ref
+settings:
+  field: field_gm_home_ref
+  data: current_data

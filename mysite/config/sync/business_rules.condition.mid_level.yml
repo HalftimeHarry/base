@@ -1,0 +1,29 @@
+uuid: 5aa03606-9ed0-48ca-933b-794e9df7e2d5
+langcode: en
+status: true
+dependencies: {  }
+id: mid_level
+label: 'Mid Level Home'
+type: logical_and
+reverse: false
+description: 'Mid Level Defense Scoring'
+target_entity_type: null
+target_bundle: null
+success_items:
+  mid_level_message:
+    id: mid_level_message
+    type: action
+    weight: -8
+fail_items: {  }
+tags:
+  'def score': 'def score'
+settings:
+  items:
+    mid_level_less:
+      weight: -100
+      type: condition
+      id: mid_level_less
+    mid_level_compare:
+      weight: -99
+      type: condition
+      id: mid_level_compare

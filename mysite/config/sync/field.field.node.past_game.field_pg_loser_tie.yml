@@ -1,0 +1,19 @@
+uuid: beac1cd0-7bbb-4fd7-8c22-a33f8637eaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_loser_tie
+    - node.type.past_game
+id: node.past_game.field_pg_loser_tie
+field_name: field_pg_loser_tie
+entity_type: node
+bundle: past_game
+label: Loser/tie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

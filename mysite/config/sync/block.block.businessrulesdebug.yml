@@ -1,0 +1,20 @@
+uuid: 463207c3-225d-4c2a-afe6-eb2cd5564443
+langcode: en
+status: true
+dependencies:
+  module:
+    - business_rules
+  theme:
+    - bartik
+id: businessrulesdebug
+theme: bartik
+region: featured_top
+weight: -7
+provider: null
+plugin: business_rules_debug_block
+settings:
+  id: business_rules_debug_block
+  label: 'Business rules debug'
+  provider: business_rules
+  label_display: '0'
+visibility: {  }

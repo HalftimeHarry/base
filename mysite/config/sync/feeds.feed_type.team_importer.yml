@@ -1,0 +1,54 @@
+uuid: a4478cf1-7d20-4921-8b55-553efca6bc4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team.field_tm_str_of_sch_float
+    - node.type.team
+  module:
+    - node
+label: 'Team Importer'
+id: team_importer
+description: 'Team Importer'
+help: 'Team Importer'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: team
+custom_sources:
+  tm:
+    label: Tm
+    value: Tm
+    machine_name: tm
+  sos:
+    label: SoS
+    value: SoS
+    machine_name: sos
+mappings:
+  -
+    target: title
+    map:
+      value: tm
+    unique:
+      value: '1'
+  -
+    target: field_tm_str_of_sch_float
+    map:
+      value: sos

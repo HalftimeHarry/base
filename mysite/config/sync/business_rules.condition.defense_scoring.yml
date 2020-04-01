@@ -1,0 +1,23 @@
+uuid: 355d79ff-34d1-42e6-b544-566e48de0fbd
+langcode: en
+status: true
+dependencies: {  }
+id: defense_scoring
+label: 'Defense Scoring Home'
+type: variable_data_comparison
+reverse: false
+description: 'Defense Scoring Home'
+target_entity_type: null
+target_bundle: null
+success_items:
+  top_scoring_display:
+    id: top_scoring_display
+    type: action
+    weight: -9
+fail_items: {  }
+tags:
+  score: score
+settings:
+  value_1: '{{mt_home->field_def_scor}}'
+  operator: '<='
+  value_2: '10'

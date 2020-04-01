@@ -1,0 +1,23 @@
+uuid: ba290c7d-e81d-42f2-9242-7fd63acc1db8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tm_scor_off
+    - node.type.team
+id: node.team.field_tm_scor_off
+field_name: field_tm_scor_off
+entity_type: node
+bundle: team
+label: 'Offense Scoring'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

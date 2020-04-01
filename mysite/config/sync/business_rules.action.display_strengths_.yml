@@ -1,0 +1,15 @@
+uuid: 477350e1-6e50-42a7-b6a4-6539784431ef
+langcode: en
+status: true
+dependencies: {  }
+id: display_strengths_
+label: 'Display strengths '
+description: 'Display strengths '
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  ref: ref
+settings:
+  message_type: status
+  message: 'Away {{mt_away->field_tm_str_of_sch_float}}| Home {{mt_home->field_tm_str_of_sch_float}}'

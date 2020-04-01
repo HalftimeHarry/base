@@ -1,0 +1,29 @@
+uuid: 7d3a3359-6e7a-4072-a8c2-8b702f5d387d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_away_ref
+    - node.type.team
+  module:
+    - bliz_odds
+id: game.game.field_gm_away_ref
+field_name: field_gm_away_ref
+entity_type: game
+bundle: game
+label: Away
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      team: team
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

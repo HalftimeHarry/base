@@ -1,0 +1,54 @@
+uuid: 9cefa433-4185-4581-a52a-78c1a99d9c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team.field_tm_rush_off
+    - node.type.team
+  module:
+    - node
+label: 'Rushing Offense'
+id: 2019_rushing_offense
+description: 'Rushing Offense Ranking'
+help: 'Rushing Offense Ranking'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: team
+custom_sources:
+  tm:
+    label: Tm
+    value: Tm
+    machine_name: tm
+  rk:
+    label: Rk
+    value: Rk
+    machine_name: rk
+mappings:
+  -
+    target: title
+    map:
+      value: tm
+    unique:
+      value: '1'
+  -
+    target: field_tm_rush_off
+    map:
+      value: rk

@@ -1,0 +1,20 @@
+uuid: b5c49eae-71f4-4051-acd5-21376bb4ff54
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_def_rus
+field_name: field_def_rus
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

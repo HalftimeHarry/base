@@ -1,0 +1,54 @@
+uuid: b3165e8d-907c-41d2-ab47-efd966aaa8a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.team.field_tm_sos
+    - node.type.team
+  module:
+    - node
+label: 'Passing Rank'
+id: passing_rank
+description: 'Using the old sos field used to evaluate the passing rankings'
+help: 'Not sos this is the Passing raking of the team'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: false
+  skip_hash_check: false
+  values:
+    type: team
+custom_sources:
+  rk:
+    label: Rk
+    value: Rk
+    machine_name: rk
+  tm:
+    label: Tm
+    value: Tm
+    machine_name: tm
+mappings:
+  -
+    target: field_tm_sos
+    map:
+      value: rk
+  -
+    target: title
+    map:
+      value: tm
+    unique:
+      value: '1'

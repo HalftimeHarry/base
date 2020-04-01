@@ -1,0 +1,45 @@
+uuid: 97b55f59-e5c2-4d42-93fc-1379feaa0b26
+langcode: en
+status: true
+dependencies: {  }
+id: display
+label: Display
+description: Display
+reacts_on: entity_update
+target_entity_type: game
+target_bundle: game
+items:
+  display_game_details:
+    id: display_game_details
+    type: action
+    weight: -100
+  fetch_away:
+    id: fetch_away
+    type: action
+    weight: -99
+  home_fetch:
+    id: home_fetch
+    type: action
+    weight: -98
+  display_strengths_:
+    id: display_strengths_
+    type: action
+    weight: -97
+  home_strength:
+    id: home_strength
+    type: condition
+    weight: -96
+  defense_scoring:
+    id: defense_scoring
+    type: condition
+    weight: -9
+  mid_level:
+    id: mid_level
+    type: condition
+    weight: -8
+  home_def_bad:
+    id: home_def_bad
+    type: condition
+    weight: -7
+tags:
+  ref: ref

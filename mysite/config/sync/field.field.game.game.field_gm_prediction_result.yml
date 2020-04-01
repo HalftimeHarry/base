@@ -1,0 +1,23 @@
+uuid: 7b04fa80-a16a-4c74-b9f9-0c85f9982247
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_prediction_result
+  module:
+    - bliz_odds
+    - options
+id: game.game.field_gm_prediction_result
+field_name: field_gm_prediction_result
+entity_type: game
+bundle: game
+label: 'Prediction result'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: did_not_play
+default_value_callback: ''
+settings: {  }
+field_type: list_string

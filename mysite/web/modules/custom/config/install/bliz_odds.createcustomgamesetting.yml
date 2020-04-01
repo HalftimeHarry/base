@@ -1,0 +1,6 @@
+bliz_odds:
+  auto_create_past_game: "yes"
+  number_to_use: 518
+  special_message: "Hello"
+  season: 2019
+  week: 1

@@ -1,0 +1,33 @@
+uuid: df5f06e9-7da7-438a-930f-e494149713b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+    - options
+id: game.field_gm_result
+field_name: field_gm_result
+entity_type: game
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: pending
+      label: pending
+    -
+      value: over
+      label: over
+    -
+      value: under
+      label: under
+    -
+      value: push
+      label: push
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

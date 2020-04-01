@@ -1,0 +1,27 @@
+uuid: cebbfd50-85f3-421f-bf6b-ff8e508c7d5f
+langcode: en
+status: true
+dependencies: {  }
+id: home_strength
+label: 'Home Strength'
+type: variable_data_comparison
+reverse: false
+description: 'Home Strength'
+target_entity_type: null
+target_bundle: null
+success_items:
+  home_strong:
+    id: home_strong
+    type: action
+    weight: -9
+fail_items:
+  away_strong:
+    id: away_strong
+    type: action
+    weight: -8
+tags:
+  ref: ref
+settings:
+  value_1: '{{mt_home->field_tm_str_of_sch_float}}'
+  operator: '>'
+  value_2: '{{mt_away->field_tm_str_of_sch_float}}'

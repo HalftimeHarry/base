@@ -1,0 +1,21 @@
+uuid: d7a65fc9-3ce2-4e50-bbe8-9b4f9411d1d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_state
+  module:
+    - bliz_odds
+    - options
+id: game.game.field_gm_state
+field_name: field_gm_state
+entity_type: game
+bundle: game
+label: State
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,15 @@
+uuid: cf535fd5-ef65-4f9c-afe1-b5758fab0821
+langcode: en
+status: true
+dependencies: {  }
+id: away_strong
+label: 'Away strong'
+description: 'Away strong'
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  ref: ref
+settings:
+  message_type: status
+  message: 'The {{mt_away->title}} have had a tougher schedule'

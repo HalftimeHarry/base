@@ -1,0 +1,105 @@
+uuid: 1035aa60-5a3a-4e04-b366-60a92478efb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.game.game.field_gm_average
+    - field.field.game.game.field_gm_away_ref
+    - field.field.game.game.field_gm_away_won
+    - field.field.game.game.field_gm_compare_tm
+    - field.field.game.game.field_gm_home_ref
+    - field.field.game.game.field_gm_limit
+    - field.field.game.game.field_gm_loser_tie
+    - field.field.game.game.field_gm_prediction
+    - field.field.game.game.field_gm_prediction_result
+    - field.field.game.game.field_gm_ptsl
+    - field.field.game.game.field_gm_ptsw
+    - field.field.game.game.field_gm_result
+    - field.field.game.game.field_gm_state
+    - field.field.game.game.field_gm_total
+    - field.field.game.game.field_gm_winner_tie
+  module:
+    - bliz_odds
+id: game.game.default
+targetEntityType: game
+bundle: game
+mode: default
+content:
+  field_gm_away_ref:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_gm_away_won:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_gm_compare_tm:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_gm_home_ref:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_gm_limit:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_gm_ptsl:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_gm_ptsw:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_gm_total:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_gm_average: true
+  field_gm_loser_tie: true
+  field_gm_prediction: true
+  field_gm_prediction_result: true
+  field_gm_result: true
+  field_gm_state: true
+  field_gm_winner_tie: true
+  user_id: true

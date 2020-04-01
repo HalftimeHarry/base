@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains bliz_odds.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bliz_odds_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bliz_odds module.
+    case 'help.page.bliz_odds':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bliz_odds_theme() {
+  return [
+    'bliz_odds' => [
+      'render element' => 'children',
+    ],
+  ];
+}

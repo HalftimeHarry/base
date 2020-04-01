@@ -1,0 +1,15 @@
+uuid: f30fb8f1-3bf1-4a0f-9160-b54594e99503
+langcode: en
+status: true
+dependencies: {  }
+id: top_scoring_display
+label: 'Top scoring display'
+description: 'Top scoring display'
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  score: score
+settings:
+  message_type: status
+  message: 'The {{mt_home->title}} have a top scoring Defense '

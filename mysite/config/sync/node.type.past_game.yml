@@ -1,0 +1,17 @@
+uuid: d556f37b-4a6d-4971-bb75-43cb66cf7ed2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Past Game'
+type: past_game
+description: 'Past games'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,25 @@
+uuid: 1f6a4b50-7c86-4cc7-b867-cd9f61f27827
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_season
+    - node.type.past_game
+id: node.past_game.field_pg_season
+field_name: field_pg_season
+entity_type: node
+bundle: past_game
+label: Season
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 2019
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

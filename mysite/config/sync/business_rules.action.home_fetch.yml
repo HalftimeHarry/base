@@ -1,0 +1,16 @@
+uuid: f8690145-c098-48a4-abe2-ea09edf1ae62
+langcode: en
+status: true
+dependencies: {  }
+id: home_fetch
+label: 'Home fetch'
+description: 'Home fetch'
+type: fetch_entity_variable
+target_entity_type: node
+target_bundle: team
+tags:
+  ref: ref
+settings:
+  field: nid
+  empty_variable: mt_home
+  value: '{{home_nid}}'

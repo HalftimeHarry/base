@@ -1,0 +1,19 @@
+uuid: 1951f7a0-90ac-436c-a502-e7c8a77be732
+langcode: en
+status: true
+dependencies: {  }
+id: mid_level_compare
+label: 'Mid Level compare'
+type: variable_data_comparison
+reverse: false
+description: 'Mid Level compare'
+target_entity_type: null
+target_bundle: null
+success_items: {  }
+fail_items: {  }
+tags:
+  'def score': 'def score'
+settings:
+  value_1: '{{mt_home->field_def_scor}}'
+  operator: '>'
+  value_2: '10'

@@ -1,0 +1,23 @@
+uuid: 1e5d4ac1-d9ab-4fd5-84ca-382aa7114e1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_ptsl
+    - node.type.past_game
+id: node.past_game.field_pg_ptsl
+field_name: field_pg_ptsl
+entity_type: node
+bundle: past_game
+label: PtsL
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

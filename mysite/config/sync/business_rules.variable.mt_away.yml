@@ -1,0 +1,13 @@
+uuid: 1951c80c-0adf-4144-aabd-e1a49e84b8a4
+langcode: en
+status: true
+dependencies: {  }
+id: mt_away
+label: 'MT Away'
+type: entity_empty_variable
+description: 'MT Away'
+target_entity_type: node
+target_bundle: team
+tags:
+  ref: ref
+settings: {  }

@@ -1,0 +1,21 @@
+uuid: 663a3d5f-cee3-41db-8c75-a2f0d8e15dda
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+id: game.field_gm_loser_tie
+field_name: field_gm_loser_tie
+entity_type: game
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

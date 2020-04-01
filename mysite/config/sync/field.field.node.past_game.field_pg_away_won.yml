@@ -1,0 +1,19 @@
+uuid: f7564f3e-c71f-4878-bcf6-bab8774f0917
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pg_away_won
+    - node.type.past_game
+id: node.past_game.field_pg_away_won
+field_name: field_pg_away_won
+entity_type: node
+bundle: past_game
+label: 'Away won'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 3abf42f6-5615-4d59-8352-bc72edfdbeb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tm_rush_off
+    - node.type.team
+id: node.team.field_tm_rush_off
+field_name: field_tm_rush_off
+entity_type: node
+bundle: team
+label: 'Offense Rushing'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

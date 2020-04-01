@@ -1,0 +1,98 @@
+uuid: f4d4e6b0-7259-4106-9ffe-a2ee052aaf8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.past_game.feeds_item
+    - field.field.node.past_game.field_pg_away_won
+    - field.field.node.past_game.field_pg_bliz_id
+    - field.field.node.past_game.field_pg_loser_tie
+    - field.field.node.past_game.field_pg_ptsl
+    - field.field.node.past_game.field_pg_ptsw
+    - field.field.node.past_game.field_pg_season
+    - field.field.node.past_game.field_pg_week
+    - field.field.node.past_game.field_pg_winner_tie
+    - node.type.past_game
+  module:
+    - user
+id: node.past_game.default
+targetEntityType: node
+bundle: past_game
+mode: default
+content:
+  field_pg_away_won:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pg_bliz_id:
+    weight: 108
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pg_loser_tie:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pg_ptsl:
+    weight: 106
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pg_ptsw:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pg_season:
+    weight: 107
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pg_week:
+    weight: 101
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_pg_winner_tie:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  feeds_item: true

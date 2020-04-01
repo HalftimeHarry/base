@@ -1,0 +1,20 @@
+uuid: 0410f56b-a12b-4e4b-80f7-63214a1ce13e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_loser_tie
+  module:
+    - bliz_odds
+id: game.game.field_gm_loser_tie
+field_name: field_gm_loser_tie
+entity_type: game
+bundle: game
+label: Loser/tie
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

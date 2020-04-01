@@ -1,0 +1,21 @@
+uuid: 02b16957-c053-47b1-b453-92e96f0f02a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - bliz_odds
+id: game.field_gm_away_won
+field_name: field_gm_away_won
+entity_type: game
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

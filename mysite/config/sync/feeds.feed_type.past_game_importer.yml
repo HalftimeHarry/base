@@ -1,0 +1,115 @@
+uuid: 3a3a2b47-dacf-432b-a9bb-a0fab02fefd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.past_game.field_pg_away_won
+    - field.field.node.past_game.field_pg_bliz_id
+    - field.field.node.past_game.field_pg_loser_tie
+    - field.field.node.past_game.field_pg_ptsl
+    - field.field.node.past_game.field_pg_ptsw
+    - field.field.node.past_game.field_pg_season
+    - field.field.node.past_game.field_pg_week
+    - field.field.node.past_game.field_pg_winner_tie
+    - node.type.past_game
+  module:
+    - node
+label: 'Past Game Importer'
+id: past_game_importer
+description: 'Past Game Importer'
+help: 'Past Game Importer'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  update_existing: 0
+  update_non_existent: _keep
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+  authorize: true
+  skip_hash_check: false
+  values:
+    type: past_game
+custom_sources:
+  bliz_id:
+    label: 'Bliz ID'
+    value: 'Bliz ID'
+    machine_name: bliz_id
+  winner_tie:
+    label: Winner/tie
+    value: Winner/tie
+    machine_name: winner_tie
+  loser_tie:
+    label: Loser/tie
+    value: Loser/tie
+    machine_name: loser_tie
+  away_won:
+    label: 'Away won'
+    value: 'Away won'
+    machine_name: away_won
+  ptsw:
+    label: PtsW
+    value: PtsW
+    machine_name: ptsw
+  ptsl:
+    label: PtsL
+    value: PtsL
+    machine_name: ptsl
+  week:
+    label: Week
+    value: Week
+    machine_name: week
+  season:
+    label: Season
+    value: Season
+    machine_name: season
+mappings:
+  -
+    target: field_pg_bliz_id
+    map:
+      value: bliz_id
+  -
+    target: title
+    map:
+      value: winner_tie
+    unique: {  }
+  -
+    target: field_pg_winner_tie
+    map:
+      value: winner_tie
+    unique: {  }
+  -
+    target: field_pg_loser_tie
+    map:
+      value: loser_tie
+    unique: {  }
+  -
+    target: field_pg_away_won
+    map:
+      value: away_won
+    unique: {  }
+  -
+    target: field_pg_ptsw
+    map:
+      value: ptsw
+  -
+    target: field_pg_ptsl
+    map:
+      value: ptsl
+  -
+    target: field_pg_week
+    map:
+      value: week
+  -
+    target: field_pg_season
+    map:
+      value: season

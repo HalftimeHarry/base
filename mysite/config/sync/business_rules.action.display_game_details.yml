@@ -1,0 +1,15 @@
+uuid: 4004d63d-7a68-4538-bc7b-0bf69429003c
+langcode: en
+status: true
+dependencies: {  }
+id: display_game_details
+label: 'Display game details'
+description: 'Display game details'
+type: show_message
+target_entity_type: null
+target_bundle: null
+tags:
+  ref: ref
+settings:
+  message_type: status
+  message: 'Home | {{home_nid}} | Away | {{away_nid}}'

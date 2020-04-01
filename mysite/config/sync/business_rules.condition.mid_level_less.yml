@@ -1,0 +1,19 @@
+uuid: 4e6b291b-7a3d-4f39-82b0-987a0566cdd8
+langcode: en
+status: true
+dependencies: {  }
+id: mid_level_less
+label: 'Mid Level less'
+type: variable_data_comparison
+reverse: false
+description: 'Mid Level less'
+target_entity_type: null
+target_bundle: null
+success_items: {  }
+fail_items: {  }
+tags:
+  'def score': 'def score'
+settings:
+  value_1: '{{mt_home->field_def_scor}}'
+  operator: '<'
+  value_2: '25'

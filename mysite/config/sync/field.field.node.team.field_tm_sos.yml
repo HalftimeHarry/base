@@ -1,0 +1,23 @@
+uuid: 503ab02a-de3d-4e8c-87bc-a00e20dfd318
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tm_sos
+    - node.type.team
+id: node.team.field_tm_sos
+field_name: field_tm_sos
+entity_type: node
+bundle: team
+label: 'Offense Passing'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,24 @@
+uuid: 47c726d6-6dc9-4751-bac8-7b902171f72f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_ptsw
+  module:
+    - bliz_odds
+id: game.game.field_gm_ptsw
+field_name: field_gm_ptsw
+entity_type: game
+bundle: game
+label: PtsW
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

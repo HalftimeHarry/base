@@ -1,0 +1,23 @@
+uuid: 8107a645-7302-422c-9d63-30ffdf318b6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.game.field_gm_result
+  module:
+    - bliz_odds
+    - options
+id: game.game.field_gm_result
+field_name: field_gm_result
+entity_type: game
+bundle: game
+label: Result
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: pending
+default_value_callback: ''
+settings: {  }
+field_type: list_string

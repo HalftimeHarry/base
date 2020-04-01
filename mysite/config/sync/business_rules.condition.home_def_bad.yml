@@ -1,0 +1,23 @@
+uuid: a9193bf8-d955-4503-b889-a9a7ddf9516d
+langcode: en
+status: true
+dependencies: {  }
+id: home_def_bad
+label: 'Home Def Bad'
+type: variable_data_comparison
+reverse: false
+description: 'Home Def Bad'
+target_entity_type: null
+target_bundle: null
+success_items:
+  home_def_bad_message:
+    id: home_def_bad_message
+    type: action
+    weight: -8
+fail_items: {  }
+tags:
+  'bad score defense': 'bad score defense'
+settings:
+  value_1: '{{mt_home->field_def_scor}}'
+  operator: '>'
+  value_2: '25'
