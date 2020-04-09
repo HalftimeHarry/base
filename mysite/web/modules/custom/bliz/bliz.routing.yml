@@ -1,0 +1,7 @@
+bliz.prediction_form:
+  path: '/bliz/form/prediction'
+  defaults:
+    _form: '\Drupal\bliz\Form\PredictionForm'
+    _title: 'PredictionForm'
+  requirements:
+    _access: 'TRUE'

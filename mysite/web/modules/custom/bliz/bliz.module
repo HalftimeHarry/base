@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains bliz.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bliz_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bliz module.
+    case 'help.page.bliz':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The Blizzard of Odds prediction Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function bliz_theme() {
+  return [
+    'bliz' => [
+      'render element' => 'children',
+    ],
+  ];
+}

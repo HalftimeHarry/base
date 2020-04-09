@@ -1,0 +1,7 @@
+services:
+  logger.channel.bliz:
+    parent: logger.channel_base
+    arguments: ['bliz']
+  blizservice:
+    class: Drupal\bliz\BlizSrvice
+    arguments: ['@entity_type.manager', '@entity.query']

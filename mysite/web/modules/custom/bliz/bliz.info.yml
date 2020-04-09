@@ -1,0 +1,5 @@
+name: 'Bliz'
+type: module
+description: 'The Blizzard of Odds prediction Module'
+core: 8.x
+package: 'Custom'
