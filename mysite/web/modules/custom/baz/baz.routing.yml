@@ -1,0 +1,34 @@
+baz.description:
+  path: '/examples/field-permission-example'
+  defaults:
+    _title: 'Field Permission Example'
+    _controller: '\Drupal\baz\Controller\FieldPermissionExampleController::description'
+  requirements:
+    _permission: 'access content'
+    
+baz.default_form:
+  path: '/enter/form'
+  defaults:
+    _title: 'Team Menu'
+    _form: '\Drupal\baz\Form\DefaultForm'
+  requirements:
+    _permission: 'give user access'
+    
+baz.participant_form:
+  path: '/participant/form'
+  defaults:
+    _title: 'Participants'
+    _form: '\Drupal\baz\Form\ParForm'
+  requirements:
+    _permission: 'give user access'
+
+baz.baz_config_form:
+  path: '/admin/config/baz/bazconfig'
+  defaults:
+    _form: '\Drupal\baz\Form\BazConfigForm'
+    _title: 'End weekly selections'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

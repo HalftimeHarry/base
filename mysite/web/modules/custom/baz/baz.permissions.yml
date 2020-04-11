@@ -1,0 +1,17 @@
+# Permissions for the baz module
+'view own fieldnote':
+  title: View own fieldnote
+'edit own fieldnote':
+  title: Edit own fieldnote
+'view any fieldnote':
+  title: View any fieldnote
+'edit any fieldnote':
+  title: Edit any fieldnote
+'administer the fieldnote field':
+  title: Administer settings for the fieldnote field.
+'set cut off for lms':
+  title: End weekly input
+'give user access':
+  title: give access teams
+
+  

@@ -1,0 +1,7 @@
+baz.baz_config_form:
+  title: 'Restrict Weeks'
+  route_name: baz.baz_config_form
+  description: 'Administators need to diable past weeks'
+  parent: system.admin_config_system
+  weight: 99
+

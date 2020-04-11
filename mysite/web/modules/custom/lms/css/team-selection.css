@@ -1,0 +1,22 @@
+.container-inline .fieldset-wrapper div{
+    font-size: 107%;
+}
+
+.outer {
+    width: 100%;
+    border: 1px solid black;
+}
+.left, .right {
+    display:inline-block;
+}
+.left {
+    min-width: 200px;
+    width: 25%;
+    background-color: #dcc2c2;
+}
+.right {
+    width: 75%;
+    background-color: #d0dee8;
+}
+
+

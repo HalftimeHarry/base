@@ -1,0 +1,75 @@
+lms.entry_form:
+  path: '/lms/entry'
+  defaults:
+    _form: '\Drupal\lms\Form\EntryForm'
+    _title: 'LMS Selection Form ***PICK LOSERS***'
+  requirements:
+    _permission: 'give user access'
+  
+  
+lms.loser_form:
+  path: '/lms/loser'
+  defaults:
+    _form: '\Drupal\lms\Form\LoserForm'
+    _title: '*** LOSER POOL *** LOSER POOL *** FOR Loser Selections!!!'
+  requirements:
+    _permission: 'give user access'
+    
+    
+lms.playoff_form:
+  path: '/lms/playoff'
+  defaults:
+    _form: '\Drupal\lms\Form\PlayoffForm'
+    _title: 'Playoff Selection Form'
+  requirements:
+    _permission: 'give user access'
+  
+
+lms.entry_bulk_form:
+  path: '/lms/bulk/lms'
+  defaults:
+    _form: '\Drupal\lms\Form\EntryBulkForm'
+    _title: 'Bulk Entry Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+    
+    
+lms.loser_bulk_form:
+  path: '/lms/bulk/loser'
+  defaults:
+    _form: '\Drupal\lms\Form\LoserBulkForm'
+    _title: 'Bulk 2nd Half Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+
+lms.second_form:
+  path: '/lms/second'
+  defaults:
+    _form: '\Drupal\lms\Form\SecondForm'
+    _title: 'Second Half Pool ***PICK 2 WINNERS PICK 2 STARTING WEEK 10***'
+  requirements:
+    _permission: 'give user access'
+
+
+
+
+
+
+
+
+
+  
+
+
+lms.lms_controller_poolList:
+  path: '/lms/mypool'
+  defaults:
+    _controller: '\Drupal\lms\Controller\LmsController::poolList'
+    _title: 'Pool List Filterd by logged in user'
+  requirements:
+    _permission: 'access content'
