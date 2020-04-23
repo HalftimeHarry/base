@@ -5,8 +5,8 @@ lms.entry_form:
     _title: 'LMS Selection Form ***PICK LOSERS***'
   requirements:
     _permission: 'give user access'
-  
-  
+
+
 lms.loser_form:
   path: '/lms/loser'
   defaults:
@@ -14,8 +14,8 @@ lms.loser_form:
     _title: '*** LOSER POOL *** LOSER POOL *** FOR Loser Selections!!!'
   requirements:
     _permission: 'give user access'
-    
-    
+
+
 lms.playoff_form:
   path: '/lms/playoff'
   defaults:
@@ -23,7 +23,7 @@ lms.playoff_form:
     _title: 'Playoff Selection Form'
   requirements:
     _permission: 'give user access'
-  
+
 
 lms.entry_bulk_form:
   path: '/lms/bulk/lms'
@@ -34,8 +34,8 @@ lms.entry_bulk_form:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
-    
-    
+
+
 lms.loser_bulk_form:
   path: '/lms/bulk/loser'
   defaults:
@@ -56,16 +56,6 @@ lms.second_form:
     _permission: 'give user access'
 
 
-
-
-
-
-
-
-
-  
-
-
 lms.lms_controller_poolList:
   path: '/lms/mypool'
   defaults:
@@ -73,3 +63,11 @@ lms.lms_controller_poolList:
     _title: 'Pool List Filterd by logged in user'
   requirements:
     _permission: 'access content'
+
+lms.enter_in_my_entry_form:
+  path: '/lms/enter_in_my_entry'
+  defaults:
+    _form: '\Drupal\lms\Form\EnterInMyEntryForm'
+    _title: 'EnterInMyEntryForm'
+  requirements:
+    _access: 'TRUE'

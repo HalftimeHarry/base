@@ -57,16 +57,18 @@ class LmsController extends ControllerBase {
      $pool_list = $lms_service->getListOfEntriesCreatedByThisPoolAdmin($pool_admin_id);
      $node_storage = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($pool_list);
 
-      $rows = [];
+    $rows = [];
 
-        foreach ($node_storage as $row){
-          $rows [] = [$title = $row->get('title')->value,
-          $wk_1 = $row->get('field_week_1')->value];
+      foreach ($node_storage as $row){
+        $rows [] = [$title = $row->get('title')->value,
+          $wk_1 = $row->get('field_week_1')->value,
+          $wk_2 = $row->get('field_week_2')->value];
         }
 
     $header = [
       'title' => t('Entry'),
       'wk_1' => t('Week 1'),
+      'wk_2' => t('Week 2'),
     ];
     $build['table'] = [
      '#type' => 'table',

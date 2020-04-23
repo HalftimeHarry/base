@@ -6,6 +6,7 @@ services:
   logger.channel.lms:
     parent: logger.channel_base
     arguments: ['lms']
+
   lms.pool:
     class: Drupal\lms\PoolService
     arguments: ['@current_user', '@entity_type.manager', '@entity.query']

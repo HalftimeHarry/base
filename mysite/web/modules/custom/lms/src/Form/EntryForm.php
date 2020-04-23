@@ -149,14 +149,14 @@ class EntryForm extends FormBase {
         'wk_17' => $this->t('Week 17')
   ];
 
-     $form['selected_life'] = [
-    '#type' => 'tableselect',
-    '#header' => $header,
-    '#options' => $op,
-    '#multiple' => FALSE,
-    '#required' => TRUE,
-    '#empty' => $this->t('No entries found'),
-   ];
+    $form['selected_life'] = [
+     '#type' => 'tableselect',
+     '#header' => $header,
+     '#options' => $op,
+     '#multiple' => FALSE,
+     '#required' => TRUE,
+     '#empty' => $this->t('No entries found'),
+    ];
 
     $form['actions'] = [
       '#type' => 'actions',
@@ -233,33 +233,33 @@ class EntryForm extends FormBase {
       another team and target the week that will replace the team you want to change and make them available for the future.'),
     ];
 
-      $form['wk_selected'] = [
-              '#type' => 'select',
-              '#title' => $this->t('Select week'),
-         '#options' => [
-                    '1' => $this->t('Week 1'),
-                    '2' => $this->t('Week 2'),
-                    '3' => $this->t('Week 3'),
-                    '4' => $this->t('Week 4'),
-                    '5' => $this->t('Week 5'),
-                    '6' => $this->t('Week 6'),
-                    '7' => $this->t('Week 7'),
-                    '8' => $this->t('Week 8'),
-                    '9' => $this->t('Week 9'),
-                    '10' => $this->t('Week 10'),
-                    '11' => $this->t('Week 11'),
-                    '12' => $this->t('Week 12'),
-                    '13' => $this->t('Week 13'),
-                    '14' => $this->t('Week 14'),
-                    '15' => $this->t('Week 15'),
-                    '16' => $this->t('Week 16'),
-                    '17' => $this->t('Week 17'),
-               ],
+    $form['wk_selected'] = [
+            '#type' => 'select',
+            '#title' => $this->t('Select week'),
+        '#options' => [
+                  '1' => $this->t('Week 1'),
+                  '2' => $this->t('Week 2'),
+                  '3' => $this->t('Week 3'),
+                  '4' => $this->t('Week 4'),
+                  '5' => $this->t('Week 5'),
+                  '6' => $this->t('Week 6'),
+                  '7' => $this->t('Week 7'),
+                  '8' => $this->t('Week 8'),
+                  '9' => $this->t('Week 9'),
+                  '10' => $this->t('Week 10'),
+                  '11' => $this->t('Week 11'),
+                  '12' => $this->t('Week 12'),
+                  '13' => $this->t('Week 13'),
+                  '14' => $this->t('Week 14'),
+                  '15' => $this->t('Week 15'),
+                  '16' => $this->t('Week 16'),
+                  '17' => $this->t('Week 17'),
+              ],
   ];
 
     $form['selected_team'] = [
       '#type' => 'radios',
-      '#title' => $this->t('Use the button left of the team to select that team'),
+     // '#title' => $this->t('Use the button left of the team to select that team'),
       '#attributes' => array('class' => array('container-inline')),
       '#header' => $header,
       '#options' => $result,
